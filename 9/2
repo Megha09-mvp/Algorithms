@@ -1,0 +1,11 @@
+➢ We can simply implement this optimization of Bellmon-Ford
+algorithm by remembering if v was relaxed or not. If v is relaxed then
+we wait to see if v was updated (which means being relaxed again). If
+v was not updated, then we would stop.
+➢ Because the greatest number of edges on any shortest path from the
+source is m, then the path weight in graph. By the upper-bound
+property, after m iterations, no d values will ever change. Therefore,
+no d values will change in the (m+1) st iteration. Because we do not
+know m in advance, we cannot make the algorithm iterate exactly m
+times and then terminate. But if we just make the algorithm stop
+when nothing changes any more, it will stop after m + 1 iterations.

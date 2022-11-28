@@ -1,0 +1,24 @@
+Q) How many edges does a minimum spanning tree for above example?
+Ans: No. of edges of MST = |V|-1 = |10|-1 = 9
+Q) In a graph G. let the edge u v have the least weight. is it true that u v is always part of
+any minimum spanning tree of G? Justify your answers.
+Ans: Proof by contradiction:
+Let us assume that the MST does not contain the edge having least weight. If we try to
+include the least weight edge into our tree there will be cycle. So now we can remove
+another edge and add the least weight edge and form MST having lower weight. Hence
+the previous MST was incorrect. Therefore, the least weight edge will always be included
+in the MST.
+Q) Let G be a graph and T be a minimum spanning tree of G. Suppose that the
+weight of an edge e is decreased. How can you find the minimum spanning
+tree of the modified graph? What is the runtime of your solution?
+Ans: Given G be graph with n vertices and T be an minimum cost spanning tree.
+Let us consider (a, b) be an edge not in T whose weight is decreased.
+(1) Using DFS find the simple path from a to b in T.
+(2) Find an edge weight e on that unique path which is maximum among all edge weight.
+(3) Now check if weight of e is greater than that of (a, b), then replace e in T with edge (a,
+b).
+This can be done in linear time
+Q) Find order of edges for Kruskal's and Prim's?
+Ans: The edges in Kruskal’s Algorithm can be discontinuous as it selects the
+edges with minimum weight as that to Prim’s algorithm which forms MST in a
+continuous connected edges pattern.
